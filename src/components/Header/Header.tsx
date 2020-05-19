@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Header: React.FC = (): React.ReactElement => {
     return (
@@ -10,6 +10,6 @@ const Header: React.FC = (): React.ReactElement => {
             </nav>
         </header>
     );
-}
+};
 
 export default Header;
