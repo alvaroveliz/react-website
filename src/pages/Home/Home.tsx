@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid, List, ListItem, ListItemText } from '@material-ui/core/';
 import Hero from '../../components/Hero';
+import Skills from '../../components/Skills';
 import LatestPosts from '../../components/LatestPosts';
 import me from '../../assets/images/me.png';
 import classes from './home.module.scss';
@@ -26,6 +27,7 @@ const Home: React.FC = (): React.ReactElement => {
                     </Grid>
                     <Grid item xs={8}>
                         <Hero />
+                        {/* <Skills /> */}
                         <LatestPosts />
                     </Grid>
                 </Grid>
