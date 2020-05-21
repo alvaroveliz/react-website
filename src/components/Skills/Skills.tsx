@@ -1,54 +1,129 @@
 import React from 'react';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, Grid } from '@material-ui/core/';
+import {
+    ExpansionPanel,
+    ExpansionPanelSummary,
+    ExpansionPanelDetails,
+    Typography,
+    Grid,
+    Chip,
+    Avatar,
+} from '@material-ui/core/';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import classes from './skills.module.scss';
 
 const Skills: React.FC = (): React.ReactElement => {
+    const frontEndSkills = [
+        'React JS',
+        'TypeScript',
+        'AngularJS',
+        'RESTFul API',
+        'CSS3',
+        'ES6/ES2015',
+        'Sass',
+        'LESS',
+        'HTML5',
+        'Yarn',
+        'Gulp',
+        'XML',
+        'JSON',
+        'jQuery',
+    ];
+
+    const backEndSkills = [
+        'NodeJS',
+        'Express',
+        'PHP',
+        'Laravel',
+        'Symfony',
+        'NextJS',
+        'Java',
+        'Python',
+        'SOAP',
+        'XMLRPC',
+    ];
+
+    const databases = ['MariaDB / MySQL', 'PostgresSQL', 'SQLite', 'SQLServer', 'DBII'];
+
+    const devOps = ['Circle CI', 'Gitlab CI', 'Ubuntu Server', 'Debian', 'Git', 'SVN'];
+
+    const cloud = ['Azure', 'AWS', 'Google Cloud', 'Docker', 'Vagrant'];
+
+    const manage = ['PMI', 'Agile', 'Scrum', 'Kanban', 'Jira', 'Trello', 'MS Project'];
+
     return (
-        <div>
-            <ExpansionPanel square>
+        <div className={classes.skills}>
+            <ExpansionPanel square className={classes.skillsPanel}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="skills-content"
                     id="skills-header"
                 >
-                    <Typography>Más sobre mi y mis habilidades</Typography>
+                    <Typography>Ver mis habilidades en detalle</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Grid container spacing={4}>
-                        <Grid item>
-                            <Typography variant="overline" display="block" gutterBottom>
+                        <Grid item xs={6}>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 FrontEnd
                             </Typography>
                             <Typography variant="body2">
-                                React JS, TypeScript, AngularJS.
-                                <br />
-                                CSS3, ES6/ES2015, SaSS, LESS.
-                                <br />
-                                HTML5, JSON, Jade, RESTFul API
-                                <br />
-                                Yarn, Bower, Grunt, Gulp, Yeoman
-                                <br />
-                                XML, JSON, jQuery.
-                                <br />
+                                <div className={classes.skillsTags}>
+                                    {frontEndSkills.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
                             </Typography>
-                            <Typography variant="overline" display="block" gutterBottom>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 BackEnd
                             </Typography>
                             <Typography variant="body2">
-                                PHP, Laravel, Symfony.
-                                <br />
-                                NodeJS, Express, NextJS.
-                                <br />
-                                Java, Python.
-                                <br />
-                                SOAP, XMLRPC
+                                <div className={classes.skillsTags}>
+                                    {backEndSkills.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
                             </Typography>
-                            <Typography variant="overline" display="block" gutterBottom>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 Bases de datos
                             </Typography>
                             <Typography variant="body2">
-                                MariaDB / MySQL, PostgresSQL <br />
-                                SQLite, SQLServer, DBII
+                                <div className={classes.skillsTags}>
+                                    {databases.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                                DevOps / Servicios
+                            </Typography>
+                            <Typography variant="body2">
+                                <div className={classes.skillsTags}>
+                                    {devOps.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
+                            </Typography>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                                Cloud Computing
+                            </Typography>
+                            <Typography variant="body2">
+                                <div className={classes.skillsTags}>
+                                    {cloud.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
+                            </Typography>
+                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                                Gestión
+                            </Typography>
+                            <Typography variant="body2">
+                                <div className={classes.skillsTags}>
+                                    {manage.map((skill) => {
+                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    })}
+                                </div>
                             </Typography>
                         </Grid>
                     </Grid>

@@ -27,7 +27,7 @@ const Home: React.FC = (): React.ReactElement => {
                     </Grid>
                     <Grid item xs={8}>
                         <Hero />
-                        {/* <Skills /> */}
+                        <Skills />
                         <LatestPosts />
                     </Grid>
                 </Grid>

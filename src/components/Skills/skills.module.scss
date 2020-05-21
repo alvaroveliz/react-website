@@ -1,0 +1,25 @@
+.skills {
+    padding: {
+        bottom: 20px;
+    }
+}
+
+.skillsPanel {
+    background-color: inherit !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #ddd;
+}
+
+.skillsTitle {
+    padding-top: 10px;
+    color: #666;
+}
+
+.skillsTags {
+    & > * {
+        margin: {
+            right: 2px;
+            bottom: 2px;
+        }
+    }
+}
