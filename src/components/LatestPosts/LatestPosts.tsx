@@ -3,9 +3,10 @@ import axios from 'axios';
 import { Grid, CircularProgress, Typography } from '@material-ui/core/';
 import CardPost from '../CardPost';
 import commonClasses from '../../styles/common.module.scss';
+import { Post } from '../../types/Post';
 
 const LatestPosts: React.FC = (): React.ReactElement => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([] as Array<Post>);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const LatestPosts: React.FC = (): React.ReactElement => {
     return (
         <>
             <Typography variant="overline" display="block" gutterBottom>
-                Ultimos posts
+                Últimos posts
             </Typography>
             <Grid container spacing={2}>
                 {isLoading ? (
@@ -33,11 +34,13 @@ const LatestPosts: React.FC = (): React.ReactElement => {
                         <CircularProgress />
                     </div>
                 ) : (
-                    posts.map((post) => (
-                        <Grid item xs={6}>
-                            <CardPost post={post} />
-                        </Grid>
-                    ))
+                    posts.map((post, index) => {
+                        return (
+                            <Grid item xs={6} key={index}>
+                                <CardPost {...post} />
+                            </Grid>
+                        );
+                    })
                 )}
             </Grid>
         </>

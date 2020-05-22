@@ -1,12 +1,9 @@
 import React from 'react';
-import { Card, CardContent, CardActions, Typography, Button } from '@material-ui/core/';
+import { Card, CardContent, CardActions, Typography, Button } from '@material-ui/core';
+import { Post } from '../../types/Post';
 
-interface Props {
-    post: any;
-}
-
-const CardPost: React.FC<Props> = (props): React.ReactElement => {
-    const { id, date, link, title, content, excerpt } = props.post;
+const CardPost: React.FC<Post> = (props): React.ReactElement => {
+    const { title, excerpt } = props;
     const regex = /(<([^>]+)>)/gi;
     const parsedExcerpt = excerpt.rendered.replace(regex, '');
 
