@@ -12,16 +12,16 @@ const Home: React.FC = (): React.ReactElement => {
             <Container maxWidth="md">
                 <Grid container spacing={2}>
                     <Grid item xs={4}>
-                        <img src={me} className={classes.me} />
+                        <img src={me} className={classes.me} alt="Álvaro Véliz" />
                         <List component="nav">
                             <ListItem button selected={true}>
-                                <ListItemText primary="Inicio"></ListItemText>
+                                <ListItemText primary="Inicio" />
                             </ListItem>
                             <ListItem button>
-                                <ListItemText primary="Blog"></ListItemText>
+                                <ListItemText primary="Blog" />
                             </ListItem>
                             <ListItem button>
-                                <ListItemText primary="Contacto"></ListItemText>
+                                <ListItemText primary="Contacto" />
                             </ListItem>
                         </List>
                     </Grid>

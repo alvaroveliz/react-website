@@ -6,13 +6,12 @@ import {
     Typography,
     Grid,
     Chip,
-    Avatar,
 } from '@material-ui/core/';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import classes from './skills.module.scss';
 
 const Skills: React.FC = (): React.ReactElement => {
-    const frontEndSkills = [
+    const frontEndSkills: Array<string> = [
         'React JS',
         'TypeScript',
         'AngularJS',
@@ -29,7 +28,7 @@ const Skills: React.FC = (): React.ReactElement => {
         'jQuery',
     ];
 
-    const backEndSkills = [
+    const backEndSkills: Array<string> = [
         'NodeJS',
         'Express',
         'PHP',
@@ -42,13 +41,13 @@ const Skills: React.FC = (): React.ReactElement => {
         'XMLRPC',
     ];
 
-    const databases = ['MariaDB / MySQL', 'PostgresSQL', 'SQLite', 'SQLServer', 'DBII'];
+    const databases: Array<string> = ['MariaDB / MySQL', 'PostgresSQL', 'SQLite', 'SQLServer', 'DBII'];
 
-    const devOps = ['Circle CI', 'Gitlab CI', 'Ubuntu Server', 'Debian', 'Git', 'SVN'];
+    const devOps: Array<string> = ['Circle CI', 'Gitlab CI', 'Ubuntu Server', 'Debian', 'Git', 'SVN'];
 
-    const cloud = ['Azure', 'AWS', 'Google Cloud', 'Docker', 'Vagrant'];
+    const cloud: Array<string> = ['Azure', 'AWS', 'Google Cloud', 'Docker', 'Vagrant'];
 
-    const manage = ['PMI', 'Agile', 'Scrum', 'Kanban', 'Jira', 'Trello', 'MS Project'];
+    const manage: Array<string> = ['PMI', 'Agile', 'Scrum', 'Kanban', 'Jira', 'Trello', 'MS Project'];
 
     return (
         <div className={classes.skills}>
@@ -66,30 +65,30 @@ const Skills: React.FC = (): React.ReactElement => {
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 FrontEnd
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {frontEndSkills.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {frontEndSkills.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 BackEnd
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {backEndSkills.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {backEndSkills.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 Bases de datos
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {databases.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {databases.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
@@ -98,30 +97,30 @@ const Skills: React.FC = (): React.ReactElement => {
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 DevOps / Servicios
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {devOps.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {devOps.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 Cloud Computing
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {cloud.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {cloud.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
                             <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
                                 Gestión
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="body2" component="div">
                                 <div className={classes.skillsTags}>
-                                    {manage.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
+                                    {manage.map((skill, index) => {
+                                        return <Chip variant="outlined" label={skill} size="small" key={index} />;
                                     })}
                                 </div>
                             </Typography>
