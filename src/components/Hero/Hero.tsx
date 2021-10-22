@@ -1,21 +1,19 @@
 import React from 'react';
-import { Box, Typography, Link } from '@material-ui/core/';
+import { Box, Typography } from '@mui/material/';
 import classes from './hero.module.scss';
 
 const Hero: React.FC = (): React.ReactElement => {
     return (
         <div className={classes.hero}>
+            <Typography variant="h5" gutterBottom>
+                Hola, soy
+            </Typography>
             <Typography variant="h1" gutterBottom>
-                <Box fontWeight="bold">Hola, soy Álvaro Véliz</Box>
+                <Box fontWeight="bold">Álvaro Véliz</Box>
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-                Ingeniero Informático Senior con más de 10 años de experiencia en desarrollo Front-end, Back-end y
-                aplicaciones SaaS. Actualmente trabajo en{' '}
-                <Link href="https://viajesfalabella.cl">Viajes Falabella by Despegar</Link> como Ingeniero de
-                Desarrollo, y estoy en mi segunda vuelta por las tecnologías. He vuelto con el <Link href="">blog</Link>{' '}
-                y a veces hago un <Link href="https://open.spotify.com/show/2ovzcF7Cz5hvJqPkmuuz67">podcast</Link> con
-                un amigo. Mis amigos y cercanos también me conocen como{' '}
-                <Link href="https://mixcloud.com/thisperso">DJ thisperso</Link>.
+                Desarrollador Full-Stack con más de 10 años de experiencia en aplicaciones SaaS y desarrollo front-end,
+                back-end. He liderado a equipos de 5 a 10 personas relacionados con tecnología y negocios.
             </Typography>
         </div>
     );

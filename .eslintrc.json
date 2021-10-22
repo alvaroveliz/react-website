@@ -15,7 +15,15 @@
     },
     "plugins": ["@typescript-eslint", "prettier"],
     "rules": {
-        "node/no-unsupported-features/es-syntax": 0
+        "node/no-unsupported-features/es-syntax": 0,
+        "node/no-missing-import": [
+            "error",
+            {
+                "allowModules": [],
+                "resolvePaths": ["/src", "/node_modules"],
+                "tryExtensions": [".js", ".json", ".node", ".ts", ".d.ts", ".tsx"]
+            }
+        ]
     },
     "settings": {
         "import/resolver": {

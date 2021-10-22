@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-    ExpansionPanel,
-    ExpansionPanelSummary,
-    ExpansionPanelDetails,
-    Typography,
-    Grid,
-    Chip,
-    Avatar,
-} from '@material-ui/core/';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Typography, Grid, Chip } from '@mui/material/';
 import classes from './skills.module.scss';
 
 const Skills: React.FC = (): React.ReactElement => {
@@ -52,83 +43,72 @@ const Skills: React.FC = (): React.ReactElement => {
 
     return (
         <div className={classes.skills}>
-            <ExpansionPanel square className={classes.skillsPanel}>
-                <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="skills-content"
-                    id="skills-header"
-                >
-                    <Typography>Ver mis habilidades en detalle</Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                    <Grid container spacing={4}>
-                        <Grid item xs={6}>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                FrontEnd
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {frontEndSkills.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                BackEnd
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {backEndSkills.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                Bases de datos
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {databases.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                DevOps / Servicios
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {devOps.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                Cloud Computing
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {cloud.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                            <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
-                                Gestión
-                            </Typography>
-                            <Typography variant="body2">
-                                <div className={classes.skillsTags}>
-                                    {manage.map((skill) => {
-                                        return <Chip variant="outlined" label={skill} size="small" />;
-                                    })}
-                                </div>
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+            <Grid container spacing={4}>
+                <Grid item xs={6}>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        FrontEnd
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {frontEndSkills.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        BackEnd
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {backEndSkills.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        Bases de datos
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {databases.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        DevOps / Servicios
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {devOps.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        Cloud Computing
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {cloud.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                    <Typography variant="overline" display="block" className={classes.skillsTitle} gutterBottom>
+                        Gestión
+                    </Typography>
+                    <Typography variant="body2">
+                        <div className={classes.skillsTags}>
+                            {manage.map((skill) => {
+                                return <Chip variant="outlined" label={skill} size="small" />;
+                            })}
+                        </div>
+                    </Typography>
+                </Grid>
+            </Grid>
         </div>
     );
 };
